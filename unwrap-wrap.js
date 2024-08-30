@@ -6,12 +6,11 @@ const base58PrivateKey = 'YOUR PRIVATE SOLANA WALLET KEY';
 
 const privateKeyUint8Array = bs58.decode(base58PrivateKey);
 
-// Use the Tatum RPC URL with the API key in the URL
 const tatumRpcUrl = 'https://api.tatum.io/v3/blockchain/node/solana-mainnet/YOUR-TATUM-API-KEY';
 
 const connection = new solanaWeb3.Connection(tatumRpcUrl, 'confirmed');
 const wallet = solanaWeb3.Keypair.fromSecretKey(privateKeyUint8Array);
-const wSOLMintAddress = splToken.NATIVE_MINT; // wSOL mint address
+const wSOLMintAddress = splToken.NATIVE_MINT; 
 
 const thresholdWSOL = 0.05; 
 const wrapAmount = 0.04; 
